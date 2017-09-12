@@ -1,6 +1,7 @@
 package com.jiyun.myteam;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             message.what=100;
             handler.sendMessageDelayed(message,2000);
         }else {
-
+            startActivity(new Intent(MainActivity.this, Main2Activity.class));
         }
     }
 
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_start:
-
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
                 break;
         }
     }
