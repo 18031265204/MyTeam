@@ -1,4 +1,4 @@
-package adapter;
+package com.jiyun.myteam.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;

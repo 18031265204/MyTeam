@@ -13,8 +13,8 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-import adapter.MyAdapter;
-import adapter.SPUtils;
+import com.jiyun.myteam.adapter.MyAdapter;
+import com.jiyun.myteam.adapter.SPUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ViewPager view_pager;

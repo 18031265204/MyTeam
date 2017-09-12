@@ -1,4 +1,4 @@
-package adapter;
+package com.jiyun.myteam;
 
 import android.app.Application;
 
