@@ -1,5 +1,6 @@
 package com.jiyun.myteam;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -77,6 +78,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
+
     private void initQQ() {
         UMShareAPI.get(Main2Activity.this).getPlatformInfo(Main2Activity.this, SHARE_MEDIA.QQ, new UMAuthListener() {
 
@@ -87,9 +89,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-//                                         Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+                Intent intent = new Intent(Main2Activity.this, HomePageActivity.class);
 
-//                                         startActivity(intent);
+                startActivity(intent);
                 Toast.makeText(Main2Activity.this, "1111111", Toast.LENGTH_SHORT).show();
             }
 
@@ -118,7 +120,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 //                    Intent intent = new Intent(Main2Activity.this, Main2Activity.class);
 //                    startActivity(new Intent(this, ));
                     Toast.makeText(Main2Activity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Toast.makeText(this, "请输入正确信息", Toast.LENGTH_SHORT).show();
                 }
             }
