@@ -3,6 +3,7 @@ package com.jiyun.myteam;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,24 +85,26 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onStart(SHARE_MEDIA share_media) {
-
+            Log.e("TAG","onStart");
             }
 
             @Override
             public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+                Log.e("TAG","onComplete");
                 Intent intent = new Intent(Main2Activity.this, HomePageActivity.class);
-
                 startActivity(intent);
                 Toast.makeText(Main2Activity.this, "1111111", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+                Log.e("TAG","onError");
 
             }
 
             @Override
             public void onCancel(SHARE_MEDIA share_media, int i) {
+                Log.e("TAG","onCancel");
 
             }
         });
@@ -130,5 +133,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         }
 
 
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
     }
 }
