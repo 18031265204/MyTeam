@@ -50,7 +50,8 @@
             android:name="UMENG_APPKEY"
             android:value="59b79a779f06fd6718000063" />
 
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".PasswordRetrievalActivity"></activity>
     </application>
 
 </manifest>

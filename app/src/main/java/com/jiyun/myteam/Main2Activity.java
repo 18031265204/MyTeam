@@ -75,7 +75,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 //                startActivity(new Intent(Main2Activity.this, AddActivity.class));
                 break;
             case R.id.tv_pass://找回密码
-//                startActivity(new Intent(Main2Activity.this, HuiActivity.class));
+                startActivity(new Intent(Main2Activity.this, PasswordRetrievalActivity.class));
                 break;
         }
     }
