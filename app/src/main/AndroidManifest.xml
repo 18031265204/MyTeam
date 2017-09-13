@@ -52,6 +52,8 @@
 
         <activity android:name=".HomePageActivity" />
         <activity android:name=".PasswordRetrievalActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".Register2Activity"></activity>
     </application>
 
 </manifest>
