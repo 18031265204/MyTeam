@@ -72,7 +72,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.tv_zhu:
                 //注册
-//                startActivity(new Intent(Main2Activity.this, AddActivity.class));
+                startActivity(new Intent(Main2Activity.this, RegisterActivity.class));
                 break;
             case R.id.tv_pass://找回密码
                 startActivity(new Intent(Main2Activity.this, PasswordRetrievalActivity.class));
@@ -85,12 +85,12 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onStart(SHARE_MEDIA share_media) {
-            Log.e("TAG","onStart");
+                Log.e("TAG", "onStart");
             }
 
             @Override
             public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-                Log.e("TAG","onComplete");
+                Log.e("TAG", "onComplete");
                 Intent intent = new Intent(Main2Activity.this, HomePageActivity.class);
                 startActivity(intent);
                 Toast.makeText(Main2Activity.this, "1111111", Toast.LENGTH_SHORT).show();
@@ -98,13 +98,13 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
-                Log.e("TAG","onError");
+                Log.e("TAG", "onError");
 
             }
 
             @Override
             public void onCancel(SHARE_MEDIA share_media, int i) {
-                Log.e("TAG","onCancel");
+                Log.e("TAG", "onCancel");
 
             }
         });
@@ -134,6 +134,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
 
 
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
